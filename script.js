@@ -1,5 +1,5 @@
 // Ladda JSON-data
-fetch('data.json')
+fetch('information.json')
     .then(response => response.json())
     .then(data => {
         // Visa "About Me"
@@ -29,4 +29,3 @@ fetch('data.json')
             educationContainer.appendChild(eduDiv);
         });
     })
-    .catch(error => console.error('Error loading JSON data:', error));

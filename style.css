@@ -32,11 +32,6 @@ html, body {
     font-weight: 600;
     font-family:"poppins", sans-serif;
 }    
-
-.klick-down{
-    margin-top: auto;
-}
-    
        
 #nav-display-none {
     display: none;
@@ -56,22 +51,9 @@ html, body {
     align-items: center;
 }
 
-.home{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 15px;
-    width: 100%;
-}
-
-.klick-down{
-    margin-left: auto;
-    margin-top: -1.5rem;
-}
-
 .meny{
     list-style: none; 
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -95,21 +77,22 @@ html, body {
 }
 
 .media-icons img{
-    height: 3rem;
+    height: 6rem;
     display: flex;
     margin-top: 15px;
 }
 
 .hero{
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     height: 50vh;
     flex-direction: column;
 }
 
 .hero-figure{
-    width: 17rem;
+    width: 12rem;
     height: 17rem;
     border-radius: 50%;
     object-fit: cover;
@@ -146,7 +129,7 @@ footer{
     align-items: center;
     text-align: center;
     height: 100px;
-    margin-top: 3rem;
+    margin-top: 8rem;
     width: 100%;
 }
 
@@ -330,20 +313,11 @@ p {
 
 .nav-container{
     flex-direction: row;
-    margin: 1.2rem;
+    text-align: center;
 }
     
 #nav-display-none{
     display: flex;
-}
-
-.klick-down{
-    display: none;
-}
-
-.home{
-    margin-top: 0;
-    flex-direction: row;
 }
 
 .meny{
@@ -358,8 +332,9 @@ p {
 }
 
 .media-icons {
-    margin-top: -1rem;
+    margin-top: 3.5rem;
     margin-left: 9rem;
+    margin-right: 9rem;
 }
 
 .hero{
@@ -377,13 +352,13 @@ p {
 
 .hero-figure{
     margin-top: 0;
-    width: 30rem;
+    width: 50rem;
     height: 20rem;
 }
 
 .hero-img{
-    width: 20rem;
-    height: 20rem;
+    width: 25rem;
+    height: 25rem;
 }
 
 footer{
