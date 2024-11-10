@@ -27,7 +27,8 @@ html, body {
     font-family:"poppins", sans-serif;
     background: linear-gradient(135deg, #3E8FF3, #3EF1C1);
     height: 100%;
-    width: 100%;
+    font-weight: 600;
+    padding: 30px;
 }    
        
 #nav-display-none {
@@ -46,6 +47,7 @@ html, body {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    margin-right: -4rem;
 }
 
 .meny{
@@ -277,6 +279,9 @@ p {
     overflow: hidden;
 }
 
+.nav-container{
+    display: flex;
+}
 .project-image {
     height: 350px;
     background-size: cover;
@@ -461,6 +466,7 @@ h3, .job-details{
 .icons-grid > img {
     width: 80px; /* Större ikoner för bredare skärmar */
     height: 80px;
+    margin: 1.2rem;
 }
 
 h2 {
@@ -483,6 +489,16 @@ p {
 
 .project{
     margin: 1.2rem;
+}
+
+.project-image {
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+}
+.nav-container{
+    display: flex;
+
 }
 
     /*CONTACT*/
