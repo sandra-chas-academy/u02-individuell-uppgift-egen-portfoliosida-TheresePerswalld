@@ -1,11 +1,8 @@
 :root {
     --gradient-color: linear-gradient(90deg, rgba(229, 16, 170, 1) 0%, rgba(19, 176, 245, 1) 100%);
     --primary-color: #202428;
-    --secondary-color: #666666;
-    --third-color: #42446e;
-    --light-green-color: #d7ffe0;
-    --green-color: #018C0F;
-    --light-grey-color:  #A7A7A7;
+    --secondary-color: #fefbfb;
+   
 }  
 
 h2, p, h3{
@@ -26,11 +23,11 @@ h1{
     box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
-    padding: 30px;
-    font-weight: 600;
+html, body { 
     font-family:"poppins", sans-serif;
+    background: linear-gradient(135deg, #3E8FF3, #3EF1C1);
+    height: 100%;
+    width: 100%;
 }    
        
 #nav-display-none {
@@ -63,8 +60,8 @@ html, body {
 .nav-link{
     list-style: none;
     text-decoration: none;
-    font-weight: 700;
     font-size: 1.3rem;
+    font-weight: 700;
     color: var(--primary-color);
     list-style: none;
 }
@@ -92,19 +89,54 @@ html, body {
 }
 
 .hero-figure{
-    width: 12rem;
-    height: 17rem;
+    height: 16rem;
     border-radius: 50%;
     object-fit: cover;
-    margin-top: 2rem;
 }
 
+  /* Icon 3 */
+
+#nav-icon3 {
+    width: 50px;
+    height: 45px;
+    position: relative;
+    margin: 50px;
+    margin-left: auto;
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+  
+#nav-icon3 span{
+    display: flex;
+    position: absolute;
+    height: 8px;
+    width: 100%;
+    background: #141414;
+    border-radius: 9px;
+    transition: .25s ease-in-out;
+}
+   
+#nav-icon3 span:nth-child(1) {
+    top: 0px;
+}
+  
+#nav-icon3 span:nth-child(2),#nav-icon3 span:nth-child(3) {
+    top: 18px;
+}
+  
+#nav-icon3 span:nth-child(4) {
+    top: 36px;
+}
+  
 .hero-img{
     border: 5px solid #0000;
     border-radius: 50%;
-    background: linear-gradient( #00C0FD, #E70FAA) border-box;
-    width: 12rem;
-    height: 12rem;
+    background: linear-gradient( #0a0f0f, #0d0d0d) border-box;
+    width: 14rem;
+    height: 14rem;
     display: flex;
 }
 
@@ -128,9 +160,8 @@ footer{
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 100px;
-    margin-top: 8rem;
-    width: 100%;
+    margin-top: 7rem;
+    padding-top: 3rem;
 }
 
 .Therese, .email, .phone{
@@ -145,22 +176,20 @@ footer{
 .workplace-web, .workplace-web-end {
     grid-template-areas: "header work-status" "place period" "position .";
     grid-template-columns: 1fr auto;
-    padding: 20px;
-    border-bottom: 1px solid #ccc;
-    padding: 2rem 0;
+    border-bottom: 1px solid #14133b;
+    padding: 1rem 0;
     font-weight: normal;
-    margin-bottom: 2vh;
     display: flex;
 }
 
 .about-me{
-    margin-top: 2rem;
+    margin-left: 3rem;
     color: var(--third-color);
 }
 
 .about-me h4{
     margin-top: 1rem;
-    color: var(--secondary-color);
+    color:#08182993
 }
 
 .work-info h1{
@@ -169,6 +198,7 @@ footer{
 
 .work-info h3{
     margin-bottom: 1rem;
+    color: #14133b;
 }
 
 .job-details {
@@ -248,7 +278,7 @@ p {
 }
 
 .project-image {
-    height: 400px;
+    height: 350px;
     background-size: cover;
     background-position: center;
 }
@@ -339,26 +369,22 @@ p {
 
 .hero{
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
-    height: 60vh;
     padding: 2rem;
 }
 
 .hero-content{
-    font-size: 3rem;
-    text-align: left;
+    font-size: 2rem;
 }
 
 .hero-figure{
-    margin-top: 0;
-    width: 50rem;
+    width: 30rem;
     height: 20rem;
 }
 
 .hero-img{
-    width: 25rem;
-    height: 25rem;
+    width: 20rem;
+    height: 20rem;
 }
 
 footer{
@@ -366,15 +392,14 @@ footer{
     justify-content: center;
     align-items: center;
     text-align: center;
-    min-height: 100px;
+    height: 100px;
     font-size: 1rem;
-    margin-top: 10rem;
     width: 100%;
+    padding-top: 3rem;
 }
 
     /*ABOUT*/
 .about-me {
-    padding: 30px;
     display: flex;
     justify-content: space-around;
     flex-direction: column;
@@ -382,7 +407,7 @@ footer{
 
 .about-me h4 {
     font-size: 1.2em;
-    width: 60%; /* Begränsa bredden för bättre läsbarhet */
+    width: 50%; /* Begränsa bredden för bättre läsbarhet */
 }    
 
 .about-me h1{
@@ -392,13 +417,13 @@ footer{
 .workplace-web {
     display: flex;
     justify-content: space-between;
-    padding: 30px;
+    padding-top: 3rem;
 }
 
 .work-place{
     display: flex;
     flex-direction: row;
-    gap: 3rem;
+    gap: 5rem;
 }
 
 .work-info .job-details {
@@ -408,6 +433,10 @@ footer{
 h3, .job-details{
     display: flex;
     flex-direction: column;
+}
+
+.job-details{
+    margin-right: 1rem;
 }
 
 .workplace-web-end{

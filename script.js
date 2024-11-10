@@ -1,5 +1,5 @@
 // Ladda JSON-data
-fetch('information.json')
+/*fetch('information.json')
     .then(response => response.json())
     .then(data => {
         // Visa "About Me"
@@ -29,3 +29,14 @@ fetch('information.json')
             educationContainer.appendChild(eduDiv);
         });
     })
+
+    $(document).ready(function(){
+        $('#nav-icon4').click(function(){
+            // Toggle the 'open' class for the icon
+            $(this).toggleClass('open');
+            
+            // Toggle visibility of the navigation menu and media icons
+            $('.nav-link-container, .media-icons').toggleClass('visible');
+        });
+    });*/
+    
