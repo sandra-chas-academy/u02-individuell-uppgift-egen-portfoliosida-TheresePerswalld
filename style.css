@@ -28,7 +28,7 @@ html, body {
     background: linear-gradient(135deg, #3E8FF3, #3EF1C1);
     height: 100%;
     font-weight: 600;
-    padding: 30px;
+    padding-top: 1rem;
 }    
        
 #nav-display-none {
@@ -47,7 +47,27 @@ html, body {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    margin-right: -4rem;
+    margin-right: 0;
+}
+
+/* Döljer navigationslänkar och mediaikoner som standard */
+.nav-link-container, .media-icons {
+    display: none; /* Döljer element */
+}
+
+/* När .visible-klassen läggs till visas elementen */
+.nav-link-container.visible, .media-icons.visible {
+    display: block;
+}
+
+/* Styla hamburgermenyn om du vill */
+#nav-icon3 {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.visible {
+    display: block; /* Gör synlig när 'visible' klassen läggs till */
 }
 
 .meny{
@@ -64,22 +84,18 @@ html, body {
     text-decoration: none;
     font-size: 1.3rem;
     font-weight: 700;
-    color: var(--primary-color);
+    color:rgba(14, 14, 15, 0.146);
     list-style: none;
 }
 
 .media-icons {
-    display: flex;
     align-items: center;
-    justify-content: space-around;
-    gap: 6rem;
 }
 
 .media-icons img{
-    height: 6rem;
-    display: flex;
-    margin-top: 15px;
-}
+    height: 2rem;
+    margin-top: 0.7rem;
+} 
 
 .hero{
     display: flex;
@@ -102,11 +118,9 @@ html, body {
     width: 50px;
     height: 45px;
     position: relative;
-    margin: 50px;
+    margin: 2rem;
     margin-left: auto;
-    -webkit-transition: .5s ease-in-out;
-    -moz-transition: .5s ease-in-out;
-    -o-transition: .5s ease-in-out;
+    margin-top: 0;
     transition: .5s ease-in-out;
     cursor: pointer;
 }
@@ -234,6 +248,10 @@ svg {
 
 /* TECHSTACK*/
 
+.picture, .tech-stack{
+    margin: 2rem;
+}
+
 .icons-none{
     display: none;
 }
@@ -347,7 +365,6 @@ p {
 @media (min-width: 768px) {
 
 .nav-container{
-    flex-direction: row;
     text-align: center;
 }
     
@@ -367,7 +384,7 @@ p {
 }
 
 .media-icons {
-    margin-top: 3.5rem;
+    margin-top: 2rem;
     margin-left: 9rem;
     margin-right: 9rem;
 }
@@ -475,11 +492,11 @@ h2 {
 
 p {
     font-size: 20px; /* Öka storlek på paragraftext för bättre läsbarhet */
-    width: 80%; /* Justera paragrafens bredd för centrering */
+    width: 100%; /* Justera paragrafens bredd för centrering */
 }
 
 .tech-stack {
-    margin: 1.2rem;
+    margin: 3rem;
 }
 
     /*PROJEKT*/
@@ -488,7 +505,7 @@ p {
 }
 
 .project{
-    margin: 1.2rem;
+    margin: 2rem;
 }
 
 .project-image {
@@ -498,7 +515,6 @@ p {
 }
 .nav-container{
     display: flex;
-
 }
 
     /*CONTACT*/

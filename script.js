@@ -1,9 +1,20 @@
+
+$(document).ready(function() {
+    $('#nav-icon3').click(function(){
+        // Växla 'open'-klass på ikonen
+        $(this).toggleClass('open');
+
+        // Växla synlighet av navigationsmenyn och mediaikoner
+        $('.nav-link-container, .media-icons').toggleClass('visible');
+    });
+});
+
 // Ladda JSON-data
-/*fetch('information.json')
+fetch('information.json')
     .then(response => response.json())
     .then(data => {
         // Visa "About Me"
-        document.getElementById('aboutMe').textContent = data.aboutMe.description;
+        document.getElementById('about').textContent = data.about.description;
 
         // Visa arbetslivserfarenhet
         const workExperienceContainer = document.getElementById('workExperience');
@@ -30,13 +41,5 @@
         });
     })
 
-    $(document).ready(function(){
-        $('#nav-icon4').click(function(){
-            // Toggle the 'open' class for the icon
-            $(this).toggleClass('open');
-            
-            // Toggle visibility of the navigation menu and media icons
-            $('.nav-link-container, .media-icons').toggleClass('visible');
-        });
-    });*/
+  
     
