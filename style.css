@@ -87,7 +87,7 @@ html{
     text-decoration: none;
     font-size: 1.3rem;
     font-weight: 700;
-    color:#0f0e0ff0;
+    color:#040404f0;
     list-style: none;
 }
 
@@ -160,10 +160,20 @@ html{
 .hero-img{
     border: 5px solid #0000;
     border-radius: 50%;
-    background: linear-gradient( #0a0f0f, #0d0d0d) border-box;
+    outline-color: white;
+    background: linear-gradient( #faf7f7db, #f9f9fa) border-box;
     width: 14rem;
     height: 14rem;
     display: flex;
+    box-shadow: 0 10px 20px 3px rgba(28, 10, 101, 0.308);
+
+
+    &:hover{
+        cursor: pointer;
+        transform: scale(1.05);
+        background: white;
+        outline-color: white;
+    }
 }
 
 .name{
@@ -175,6 +185,7 @@ html{
 .hero-content{
     font-size: 1.3rem;
     letter-spacing: -0.1rem;
+    /* box-shadow: 0 10px 20px 3px rgba(28, 10, 101, 0.308); */
 }    
 
 .link-home{
@@ -205,7 +216,8 @@ footer{
     padding: 1rem 0;
     font-weight: normal;
     display: flex;
-    margin: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
 }
 
 
@@ -223,7 +235,7 @@ footer{
 }
 
 .info-me{
-    margin: 2rem;
+    margin-left: 2rem;
     font-size: 2rem;
 }
 
@@ -310,7 +322,12 @@ p {
 /*PROJEKT*/
 .skils{
     background: linear-gradient(90deg, #13B0F5 -2.06%, #E70FAA 100%);
+    padding: 1rem;
+    padding-top: 3rem;
+}
 
+.project {
+    padding-left: 1rem;
 }
 
 .projects-container {
@@ -330,7 +347,7 @@ p {
     &:hover {
         cursor: pointer;
         transform: scale(1.05);
-        background: rgb(205, 232, 241);
+        background: rgb(243, 244, 245);
         outline-color: rgb(39, 74, 191);
         box-shadow: 0 10px 20px 3px rgba(28, 10, 101, 0.308);
         text-shadow: 1px 1px 4px transparent;
@@ -582,16 +599,12 @@ p {
 }
 
     /*PROJEKT*/
-.skils .projects-container {
+.projects-container {
     grid-template-columns: repeat(3, 1fr); /* Two columns for larger screens */
 }
 
 .skils{
-    margin-top: 2rem;
-}
-
-.project{
-    margin: 2rem;
+    padding: 2rem;
 }
 
 .project-image {
