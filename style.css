@@ -1,0 +1,634 @@
+:root {
+    --gradient-color: linear-gradient(90deg, rgba(229, 16, 170, 1) 0%, rgba(19, 176, 245, 1) 100%);
+    --primary-color: #202428;
+    --secondary-color: #fefbfb;
+   
+}  
+
+h2, p, h3{
+    color: var(--secondary-color);
+}
+
+h1{
+    color: var(--third-color);
+}
+
+.footer{
+    color: var(--light-grey-color)
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body { 
+    font-family:"poppins", sans-serif;
+    background: linear-gradient(135deg, #3E8FF3, #3EF1C1);
+    background-attachment: fixed;
+    height: 100vh;
+    font-weight: 600;
+    padding-top: 1rem;
+}    
+
+html{
+    scroll-behavior: smooth;
+}
+       
+#nav-display-none {
+    display: none;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+
+.nav-container{
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+}
+
+/* Döljer navigationslänkar och mediaikoner som standard */
+.nav-link-container, .media-icons {
+    display: none; /* Döljer element */
+}
+
+/* När .visible-klassen läggs till visas elementen */
+.nav-link-container.visible, .media-icons.visible {
+    display: block;
+}
+
+/* Styla hamburgermenyn om du vill */
+#nav-icon3 {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.visible {
+    display: block; /* Gör synlig när 'visible' klassen läggs till */
+}
+
+.meny{
+    list-style: none; 
+    margin-bottom: 1rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.nav-link{
+    list-style: none;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color:#040404f0;
+    list-style: none;
+}
+
+.media-icons {
+    align-items: center;
+}
+
+.media-icons img{
+    height: 2rem;
+    margin-top: 0.7rem;
+} 
+
+.hero{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.hero-figure{
+    height: 16rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 6rem;
+}
+
+  /* Icon 3 */
+
+#nav-icon3 {
+    width: 50px;
+    height: 45px;
+    position: relative;
+    margin: 2rem;
+    margin-left: auto;
+    margin-top: 0;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+      
+    
+    &:hover{
+        cursor: pointer;
+        transform: scale(1.2);
+    }
+}
+  
+#nav-icon3 span{
+    display: flex;
+    position: absolute;
+    height: 8px;
+    width: 100%;
+    background: #050505;
+    border-radius: 9px;
+    transition: .25s ease-in-out;
+  
+}
+   
+#nav-icon3 span:nth-child(1) {
+    top: 0px;
+}
+  
+#nav-icon3 span:nth-child(2),#nav-icon3 span:nth-child(3) {
+    top: 18px;
+}
+  
+#nav-icon3 span:nth-child(4) {
+    top: 36px;
+}
+  
+.hero-img{
+    border: 5px solid #0000;
+    border-radius: 50%;
+    outline-color: white;
+    background: linear-gradient( #faf7f7db, #f9f9fa) border-box;
+    width: 14rem;
+    height: 14rem;
+    display: flex;
+    box-shadow: 0 10px 20px 3px rgba(28, 10, 101, 0.308);
+
+
+    &:hover{
+        cursor: pointer;
+        transform: scale(1.05);
+        background: white;
+        outline-color: white;
+    }
+}
+
+.name{
+    background: linear-gradient(90deg, rgba(229, 16, 170, 1) 0%, rgba(19, 176, 245, 1) 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-content{
+    font-size: 1.3rem;
+    letter-spacing: -0.1rem;
+    /* box-shadow: 0 10px 20px 3px rgba(28, 10, 101, 0.308); */
+}    
+
+.link-home{
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+footer{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 3rem;
+}
+
+.Therese, .email, .phone{
+    background: linear-gradient(90deg, #13B0F5 -2.06%, #E70FAA 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 18px;
+    margin-top: 5rem;
+}
+
+/*ABOUT*/
+.workplace-web, .workplace-web-end {
+    grid-template-areas: "header work-status" "place period" "position .";
+    grid-template-columns: 1fr auto;
+    border-bottom: 1px solid #14133b;
+    padding: 1rem 0;
+    font-weight: normal;
+    display: flex;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+
+.about-me{
+    color: var(--third-color);
+    height: 100vh;
+    background: linear-gradient(90deg, #13B0F5 -2.06%, #E70FAA 100%);
+    background-attachment: fixed;
+    padding-top: 1rem;
+}
+
+.about-me .info{
+    color: #050505;
+    margin: 2rem;
+}
+
+.info-me{
+    margin-left: 2rem;
+    font-size: 2rem;
+}
+
+.info{
+    margin-bottom: 3rem;
+}
+
+.work-info h1{
+    margin-bottom: 2rem;
+} 
+
+
+.work-info h3{
+    margin-bottom: 1rem;
+    color: #14133b;
+}
+
+.job-details {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0px;
+    margin-left: auto;
+    align-items: end;
+
+}
+
+.green {
+    color: var(--green-color);
+    background-color:var(--light-green-color);
+    border-radius: 21px;
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+}
+
+.work-place h4 {
+    display: flex;
+    align-items: center;
+}
+
+svg {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+/* TECHSTACK*/
+
+.tech-stack{
+    margin: 2rem;
+}
+
+
+.icons-none{
+    display: none;
+    height: 100%;
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    margin-top: 2rem;
+}
+
+p {
+    color: #555;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.icons-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.icons-grid > img {
+    width: 60px;
+    height: 60px;
+}
+
+/*PROJEKT*/
+.skils{
+    background: linear-gradient(90deg, #13B0F5 -2.06%, #E70FAA 100%);
+    padding: 1rem;
+    padding-top: 3rem;
+}
+
+.project {
+    padding-left: 1rem;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: 1fr; /* One column by default */
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Style for project cards */
+.project-card {
+    background-color: #f9f9f9;
+    border: 3px solid #0c31d5;
+    border-radius: 8px;
+    overflow: hidden;
+
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.05);
+        background: rgb(243, 244, 245);
+        outline-color: rgb(39, 74, 191);
+        box-shadow: 0 10px 20px 3px rgba(28, 10, 101, 0.308);
+        text-shadow: 1px 1px 4px transparent;
+    }
+
+    
+}
+
+.nav-container{
+    display: flex;
+}
+.project-image {
+    height: 350px;
+    background-size: cover;
+    background-position: center;
+}
+
+.project-details {
+    padding: 15px;
+}
+
+.buttons {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between; /* Spread the buttons across the available width */
+    align-items: center; /* Align them vertically in the center */
+}
+
+.buttons .button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    flex: 0 0 auto; /* Prevents the buttons from stretching */
+}
+
+.buttons .button:hover {
+    background-color: #0056b3;
+}
+
+/*CONTACT*/
+.contact-container {
+    display: flex;
+    flex-direction: column; /* Kolumn-layout för mindre skärmar */
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.contact-container p, .contact-container a {
+    margin: 5px 0;
+}
+
+.email, .phone {
+    color: var(--primary-color); /* Exempel på användning av variabel för färg */
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.email:hover, .phone:hover {
+    color: #007bff; /* För att ge länkarna en hover-effekt */
+}
+
+.or {
+    margin: 10px 0;
+    font-style: italic;
+    font-weight: 400;
+}
+
+/* MEDIA QUERY FOR SCREENS 768px AND ABOVE */
+
+@media (min-width: 768px) {
+
+
+.nav-container{
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+}
+    
+#nav-display-none{
+    display: flex;
+}
+
+#nav-icon3 {
+    width: 50px;
+    height: 45px;
+    position: relative;
+    margin-right: 4rem;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+    margin-top: 3rem;
+
+}
+  
+#nav-icon3 span{
+    display: flex;
+    position: absolute;
+    height: 8px;
+    width: 100%;
+    background: #141414;
+    border-radius: 9px;
+    transition: .25s ease-in-out;
+}
+
+.meny{
+    list-style: none; 
+    margin-bottom: 1rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}    
+
+.nav-link{
+    font-size: 1.2rem;
+}
+
+.media-icons {
+    margin-top: 2rem;
+    margin-left: 9rem;
+    margin-right: 9rem;
+}
+
+.hero{
+    flex-direction: row;
+    align-items: center; 
+    display: flex;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.hero-content{
+    font-size: 2rem;
+    margin-top: 4rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-figure{
+    width: 30rem;
+    height: 20rem;
+    margin-left: 9rem;
+}
+
+.hero-img{
+    width: 20rem;
+    height: 20rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+footer{
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100px;
+    font-size: 1rem;
+    width: 100%;
+    padding-top: 3rem;
+}
+
+    /*ABOUT*/
+.about-me {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-me h4 {
+    font-size: 1.2em;
+    width: 100%; /* Begränsa bredden för bättre läsbarhet */
+}    
+
+.about-me h1{
+    font-size: 2rem;
+}
+
+.info-me{
+    font-size: 2rem;
+}
+
+
+.workplace-web {
+    display: flex;
+}
+
+.work-place{
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+}
+
+.work-info .job-details {
+     width: 48%; /* Dela upp arbetsplats-info och job-detaljer */
+}
+
+h3, .job-details{
+    display: flex;
+    flex-direction: column;
+}
+
+.job-details{
+    margin-right: 1rem;
+}
+
+.workplace-web-end{
+    display: none;
+}
+
+    /*TECHSTACK*/
+.grid-none, .tools{
+    display: none;
+}
+
+.icons-none {
+    display: flex;
+}  
+
+.icons-grid {
+    grid-template-columns: repeat(6, 1fr); /* Ändra till 6 kolumner vid bredare skärmar */
+    gap: 30px; /* Öka gapet mellan ikoner */
+    display: grid;
+}
+
+.icons-grid > img {
+    width: 80px; /* Större ikoner för bredare skärmar */
+    height: 80px;
+    margin: 1.2rem;
+}
+
+h2 {
+    font-size: 32px; /* Större rubrikstorlek vid större skärmar */
+}
+
+p {
+    font-size: 20px; /* Öka storlek på paragraftext för bättre läsbarhet */
+    width: 100%; /* Justera paragrafens bredd för centrering */
+}
+
+.tech-stack {
+    margin: 3rem;
+}
+
+    /*PROJEKT*/
+.projects-container {
+    grid-template-columns: repeat(3, 1fr); /* Two columns for larger screens */
+}
+
+.skils{
+    padding: 2rem;
+}
+
+.project-image {
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+}
+.nav-container{
+    display: flex;
+}
+
+    /*CONTACT*/
+.contact-container {
+    display: flex;
+    flex-direction: column; /* Byter till rad-layout på större skärmar */
+    margin-top: 200px;
+}
+
+.contact-container p, .contact-container a {
+     margin: 0; /* Tar bort extra marginaler för större skärmar */
+    font-size: 58px;
+}
+
+.or,.phone{
+    display: none;
+}
+}

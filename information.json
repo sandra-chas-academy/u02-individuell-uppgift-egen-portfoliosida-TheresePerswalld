@@ -1,0 +1,51 @@
+{
+    "workExperience": [
+      {
+        "title": "Credit Officer",
+        "location": {
+          "address": "Evenemangsgatan 31",
+          "city": "Solna"
+        },
+        "type": "Full Time",
+        "period": {
+          "start": "May 2019",
+          "end": "Present"
+        }
+      },
+      {
+        "title": "AML Manager",
+        "location": {
+          "address": "Evenemangsgatan 31",
+          "city": "Solna"
+        },
+        "type": "Full Time",
+        "period": {
+          "start": "May 2018",
+          "end": "May 2019"
+        }
+      },
+      {
+        "title": "Personal Trainer",
+        "location": {
+          "address": "Bryggarvägen 5",
+          "city": "Tumba"
+        },
+        "type": "Full Time",
+        "period": {
+          "start": "August 2015",
+          "end": "December 2017"
+        }
+      }
+    ],
+    "education": [
+      {
+        "title": "Financial Assistant",
+        "location": {
+          "address": "Evenemangsgatan 31",
+          "city": "Solna"
+        },
+        "type": "Full Time"
+      }
+    ]
+  }
+  
