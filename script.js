@@ -107,7 +107,7 @@ fetchGithubRepos();
 // Fetch JSON data and generate HTML
 async function fetchData() {
     try {
-        const response = await fetch('information.json');  
+        const response = await fetch('information.json');
         const data = await response.json();
         renderWorkExperience(data.workExperience);
         renderEducation(data.education);
