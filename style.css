@@ -2,7 +2,6 @@
     --gradient-color: linear-gradient(90deg, rgba(229, 16, 170, 1) 0%, rgba(19, 176, 245, 1) 100%);
     --primary-color: #202428;
     --secondary-color: #fefbfb;
-   
 }  
 
 h2, p, h3{
@@ -211,8 +210,8 @@ footer{
 /*ABOUT*/
 .work-experience, .education{
     margin: 2rem;
+}    
 
-} 
 
 .card {
     border: 2px solid #ddd;
@@ -221,9 +220,21 @@ footer{
     margin: 2rem 0;
     /* background: #f9f9f9; */
     display: block;
+
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.05);
+        background: rgba(243, 244, 245, 0.992);
+        outline-color: rgb(39, 74, 191);
+        box-shadow: 0 10px 20px 3px rgba(28, 10, 101, 0.308);
+        text-shadow: 1px 1px 4px transparent;
+    }
 }
 
-.workplace-web, .workplace-web-end {
+
+
+
+/* .workplace-web, .workplace-web-end {
     grid-template-areas: "header work-status" "place period" "position .";
     grid-template-columns: 1fr auto;
     border-bottom: 1px solid #14133b;
@@ -232,7 +243,7 @@ footer{
     display: flex;
     margin-left: 2rem;
     margin-right: 2rem;
-}
+} */
 
 
 .about-me{
@@ -321,9 +332,8 @@ h2 {
 }
 
 p {
-    color:#050505;
-    margin-bottom: 10px;
-    font-size: 8px;
+    color:#060606;
+    font-size:1rem; 
 }
 
 .icons-grid {
@@ -380,13 +390,18 @@ p {
     display: flex;
 }
 .project-image {
-    height: 350px;
+    height: 250px;
     background-size: cover;
     background-position: center;
 }
 
-.project-details {
+.project-details{
     padding: 15px;
+    color: #050505;
+}
+
+.project-details h2{
+    color: #0b2a36;
 }
 
 .buttons {
@@ -546,23 +561,62 @@ footer{
 }
 
     /*ABOUT*/
+    .work-experience, .education{
+        margin: 0;
+    }  
+
 .about-me {
-    /* display: flex; */
+    display: flex;
     flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    text-align: center;
 }
 
+.card{
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card p{
+    font-size: 1rem;
+}
+
+.card h3{
+    font-size: 1.5rem;
+}
+
+.work-experience h2{
+    font-size: 2.2rem;
+}
+
+.education h2{
+    font-size: 2.2rem;
+}
+
+
+
 h2{
-    color: black;
+    color: rgb(249, 245, 245);
 }
 
 h3{
     color: #050505;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     padding-bottom: 1rem;
 }
 
 p{
-    font-size: 1px;
+    font-size: 1rem;
+}
+
+.info-me{
+    font-size: 2.8rem;
+    padding-top: 2rem;
 }
 /* 
 .about-me h4 {
@@ -573,10 +627,6 @@ p{
 .about-me h1{
     font-size: 2rem; */ */
 /* }
-
-.info-me{
-    font-size: 2rem;
-}
 
 
 .workplace-web {

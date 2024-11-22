@@ -21,12 +21,12 @@ document.addEventListener('scroll', () => {
     while (--index && window.scrollY + 50 < sections[index].offsetTop) {}
   
     navLinks.forEach((link) => link.classList.remove('active'));
-    navLinks[index].classList.add('active');
+    // navLinks[index].classList.add('active');
   });
 
-//     // PROJECT
+ // PROJECT
 
-async function fetchGithubRepos() {
+async function fetchTrafikljuset() {
     const url = `https://api.github.com/repos/thereseperswalld/Trafikljuset`;
 
     try {
@@ -43,7 +43,7 @@ function displayRepos(repo) {
     const repoElement = document.createElement("div");
     repoElement.classList.add("project-card");
 
-    const livePreviewLink = repo.homepage || `http://127.0.0.1:5501/trafikljus2.html`;
+    const livePreviewLink = repo.homepage || `https://thereseperswalld.github.io/Trafikljuset/`;
     
     // Generera HTML för repository
     repoElement.innerHTML = `
@@ -51,7 +51,7 @@ function displayRepos(repo) {
         <section class="project-details">
             <h2>${repo.name}</h2>
             <p>${repo.description || "Ingen beskrivning tillgänglig"}</p>
-            <p><strong>HTML,CSS</strong></p>
+            <p><strong>HTML,CSS,</strong></p>
             <div class="buttons">
                 <a href="${livePreviewLink}" class="button" target="_blank">Live Preview</a>
                 <a href="${repo.html_url}" class="button" target="_blank">View Code</a>
@@ -62,10 +62,10 @@ function displayRepos(repo) {
     repoContainer.appendChild(repoElement);
 }
 
-fetchGithubRepos();
+fetchTrafikljuset();
 
-async function fetchGithubRepos() {
-    const url = `https://api.github.com/repos/thereseperswalld/Trafikljuset`;
+async function fetchTrainingSchedule() {
+    const url = `https://api.github.com/repos/TheresePerswalld/Training-schedule`;
 
     try {
         const response = await fetch(url);
@@ -81,15 +81,26 @@ function displayRepos(repo) {
     const repoElement = document.createElement("div");
     repoElement.classList.add("project-card");
 
-    const livePreviewLink = repo.homepage || `http://127.0.0.1:5501/trafikljus2.html`;
+     // Definiera vilka teknologier som ska visas baserat på repo-namnet
+    let technologies = "";
+    if (repo.name === "Training-schedule") {
+            technologies = "HTML,CSS, JavaScript";
+    } else if (repo.name === "Trafikljuset") {
+            technologies = "HTML, CSS";
+    } else {
+            technologies = "Okända teknologier";
+    }
+
+    const livePreviewLink = repo.homepage || `https://thereseperswalld.github.io/Training-schedule/`;
     
     // Generera HTML för repository
     repoElement.innerHTML = `
-        <figure class="project-image" style="background-image: url('https://raw.githubusercontent.com/TheresePerswalld/Trafikljuset/main/path/to/image.jpg');"></figure>
+        <figure class="project-image"  <img src="träning-schedule.png" alt="Training Schedule">
+        </figure>
         <section class="project-details">
             <h2>${repo.name}</h2>
             <p>${repo.description || "Ingen beskrivning tillgänglig"}</p>
-            <p><strong>HTML,CSS </strong></p>
+            <p><strong>${technologies}</strong></p>
             <div class="buttons">
                 <a href="${repo.homepage || '#'}" class="button" target="_blank">Live Preview</a>
                 <a href="${repo.html_url}" class="button" target="_blank">View Code</a>
@@ -100,7 +111,7 @@ function displayRepos(repo) {
     repoContainer.appendChild(repoElement);
 }
 
-fetchGithubRepos();
+fetchTrainingSchedule();
 
 //ABOUT 
 
