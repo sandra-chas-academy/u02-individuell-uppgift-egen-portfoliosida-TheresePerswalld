@@ -539,6 +539,8 @@ h4{
     width: 30rem;
     height: 20rem;
     margin-left: 9rem;
+    transition: transform 0.3s ease-in-out;
+
 }
 
 .hero-img{
@@ -547,6 +549,7 @@ h4{
     justify-content: center;
     align-items: center;
     text-align: center;
+
 }
 
 footer{
@@ -598,8 +601,6 @@ footer{
     font-size: 2.2rem;
 }
 
-
-
 h2{
     color: rgb(249, 245, 245);
 }
@@ -618,43 +619,6 @@ p{
     font-size: 2.8rem;
     padding-top: 2rem;
 }
-/* 
-.about-me h4 {
-    font-size: 1.2em;
-    width: 100%; /* Begränsa bredden för bättre läsbarhet */
-/* }    
-
-.about-me h1{
-    font-size: 2rem; */ */
-/* }
-
-
-.workplace-web {
-    display: flex;
-}
-
-.work-place{
-    display: flex;
-    flex-direction: row;
-    gap: 5rem;
-}
-
-.work-info .job-details {
-     width: 48%; /* Dela upp arbetsplats-info och job-detaljer */
-/* }
-
-h3, .job-details{
-    display: flex;
-    flex-direction: column;
-}
-
-.job-details{
-    margin-right: 1rem;
-}
-
-.workplace-web-end{
-    display: none;
-} */
 
     /*TECHSTACK*/
 .grid-none, .tools{
@@ -666,24 +630,24 @@ h3, .job-details{
 }  
 
 .icons-grid {
-    grid-template-columns: repeat(6, 1fr); /* Ändra till 6 kolumner vid bredare skärmar */
-    gap: 30px; /* Öka gapet mellan ikoner */
+    grid-template-columns: repeat(6, 1fr);
+    gap: 30px; 
     display: grid;
 }
 
 .icons-grid > img {
-    width: 80px; /* Större ikoner för bredare skärmar */
+    width: 80px; 
     height: 80px;
     margin: 1.2rem;
 }
 
 h2 {
-    font-size: 32px; /* Större rubrikstorlek vid större skärmar */
+    font-size: 32px;
 }
 
 p {
-    font-size: 20px; /* Öka storlek på paragraftext för bättre läsbarhet */
-    width: 100%; /* Justera paragrafens bredd för centrering */
+    font-size: 20px;
+    width: 100%; 
 }
 
 .tech-stack {
@@ -692,7 +656,7 @@ p {
 
     /*PROJEKT*/
 .projects-container {
-    grid-template-columns: repeat(3, 1fr); /* Two columns for larger screens */
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .skils{

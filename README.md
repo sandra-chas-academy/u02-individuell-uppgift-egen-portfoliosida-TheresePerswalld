@@ -26,8 +26,6 @@ Du får gärna ha både dessa projekt och andra som genereras utifrån JSON-data
 
 När hämtningen av projekten sker ska det finnas information om att projekten håller på att ladda in så att besökaren inte undrar varför sidan först är tom.
 
-
-
 ### Tekniska krav:
 * Validerad med 0 fel på https://validator.w3.org
 * Inga errors i Console
@@ -35,15 +33,32 @@ När hämtningen av projekten sker ska det finnas information om att projekten h
 ### Sammantfattning av projekt + teoretiska frågor
 
 1. Du sammanfattar ditt projekt i README.md och reflekterar kring styrkor och ev brister. Max 500 ord.
+
+När jag gjorde U01 tycker jag att det var svårt men när man började med denna uppgift så kände jag att U01 var enkel om jag ska jämföra med denna och JavaScript som jag har tyck är jättesvårt. Det är mycker man ska lära sig hela tiden och det kommer alltid mya saker som man kan göra/lägga till/synka o.s.v. Styrkerma är att jag inte ger upp utan söker svar om jag verkligen inte kan och lär mig på egenhand ocksp. 
+jag tycker fortfarande att JavaScripten är svår och känner inte att jag har alla hästar hemma där men tänker också att det kommer med kursens gång och att man inte får ge upp för att man inte förstår. 
+
+
 2. Du svarar på dessa frågor (max 800 ord):
 
 Vad kan man utveckla m.h.a av Javascript inom frontend?
+
+JavaScript är ett kraftfullt språk som är centralt för frontendutveckling och används för att skapa interaktivitet, dynamiska funktioner och avancerade användarupplevelser.
+JavaScript är ett mångsidigt språk som låter dig skapa allt från enkla interaktiva funktioner till avancerade webblösningar som dynamiska applikationer, spel, animationer och datavisualiseringar. Möjligheterna är enorma, och kunskap i JavaScript är en nyckelkompetens inom frontendutveckling!
+
 Vad är JSON och hur används det inom frontend?
+
+JSON står för (JavaScript Object Notation) och är ett lättviktigt dataformat som används för att strukturera och utbyta data mellan olika system. Formatet används för att skcika data från backend till frontend. 
+Oftast hämtar man data från en databas som direkt omvandlas av backend men man kan lagra även i JSON i filer (.json). 
+JSON används ofta inom frontendutveckling för att hämta, spara och presentera data från externa API eller backendservrar.
+JSON-data består av nyckel-värde-par och har en struktur som liknar JavaScript-objekt.
+Frontend-applikationer kan lagra JSON-data lokalt i Local Storage eller Session Storage. Detta används exempelvis för att spara användarinställningar eller sessionsdata.
+
 Vad är HTTP och varför bör man som frontendutvecklare ha kunskap om det och dess protokoll?
 
+HTTP är (HyperText Transfer Protocol) som är ett protokoll som används för att överföra data mellan klienten (t.ex. en webbläsare) och servern över internet. Det är grundstenen för webben och används för att hämta resurser som webbsidor, bilder, videos och API-data.
+HTTP är en samling av regler som bestämmer hur kommunicationen mellan två enheter ska fungera. 
 
 ## Kriterier för bedömning
-
 
 Icke Godkänd (IG), Godkänd (G) eller Väl Godkänd (VG)
 
@@ -52,13 +67,11 @@ Din portfolio-sida uppfyller alla krav enligt kravspecifikationen.
 Du visar att du kan utan allvarliga brister eller missar utveckla denna portfoliosida enligt kraven
 Du sammanfattar ditt projekt samt ger ett översiktligt och korrekt svar på frågorna
 
-
 ### Väl Godkänd (VG)
 
 Din portfolio-sida uppfyller alla krav enligt kravspecifikationen samt VG-kraven
 Du uppvisar en mer avancerad förståelse för Git genom att jobba med en developer-branch som du sedan mergar i main
 Du visar att du kan utan brister, eller bara i sådan omfattning att de knappt märks eller påverkar slutresultatet
-
 
 ### Börja uppgift / Din inlämning
 * Du börjar och lämnar in din uppgift genom Github Classroom på denna länk.
