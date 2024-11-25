@@ -53,7 +53,7 @@ function displayRepos(repo) {
             <p>${repo.description || "Ingen beskrivning tillgänglig"}</p>
             <p><strong>HTML,CSS,</strong></p>
             <div class="buttons">
-                <a href="${livePreviewLink} 'https://thereseperswalld.github.io/Trafikljuset//'}" class="button" target="_blank">Live Preview</a>
+                <a href="${repo.homepage || `https://thereseperswalld.github.io/Trafikljuset/`}" class="button" target="_blank">Live Preview</a>
                 <a href="${repo.html_url}" class="button" target="_blank">View Code</a>
             </div>
         </section>
