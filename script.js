@@ -53,7 +53,7 @@ function displayRepos(repo) {
             <p>${repo.description || "Ingen beskrivning tillgänglig"}</p>
             <p><strong>HTML,CSS,</strong></p>
             <div class="buttons">
-                <a href="${livePreviewLink}" class="button" target="_blank">Live Preview</a>
+                <a href="${livePreviewLink} 'https://thereseperswalld.github.io/Trafikljuset//'}" class="button" target="_blank">Live Preview</a>
                 <a href="${repo.html_url}" class="button" target="_blank">View Code</a>
             </div>
         </section>
@@ -84,7 +84,7 @@ function displayRepos(repo) {
      // Definiera vilka teknologier som ska visas baserat på repo-namnet
     let technologies = "";
     if (repo.name === "Training-schedule") {
-            technologies = "HTML,CSS, JavaScript";
+            technologies = "HTML,CSS,JavaScript";
     } else if (repo.name === "Trafikljuset") {
             technologies = "HTML, CSS";
     } else {
@@ -102,8 +102,8 @@ function displayRepos(repo) {
             <p>${repo.description || "Ingen beskrivning tillgänglig"}</p>
             <p><strong>${technologies}</strong></p>
             <div class="buttons">
-                <a href="${repo.homepage || '#'}" class="button" target="_blank">Live Preview</a>
-                <a href="${repo.html_url}" class="button" target="_blank">View Code</a>
+                <a href="${repo.homepage || 'https://thereseperswalld.github.io/Training-schedule/'}" class="button" target="_blank">Live Preview</a>
+                <a href="${repo.html_url || '#'}" class="button" target="_blank">View Code</a>
             </div>
         </section>
     `;
