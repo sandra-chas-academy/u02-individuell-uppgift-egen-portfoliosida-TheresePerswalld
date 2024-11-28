@@ -1,59 +1,71 @@
 const aboutFile = "./information.json";
 
 // MENU
-
 $(document).ready(function() {
-    $('#nav-icon3').click(function(){
-        // Växla 'open'-klass på ikonen
+    $('#nav-icon3').click(function() {
         $(this).toggleClass('open');
-
-        // Växla synlighet av navigationsmenyn och mediaikoner
         $('.nav-link-container, .media-icons').toggleClass('visible');
     });
 });
 
-// Markera aktiv länk i navigationsmenyn baserat på scrollposition
+// Markera aktiv länk vid scroll
 document.addEventListener('scroll', () => {
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('.nav-link');
     let index = sections.length;
-  
     while (--index && window.scrollY + 50 < sections[index].offsetTop) {}
-  
-    navLinks.forEach((link) => link.classList.remove('active'));
+    navLinks.forEach(link => link.classList.remove('active'));
     // navLinks[index].classList.add('active');
-  });
+});
 
- // PROJECT
-
-async function fetchTrafikljuset() {
-    const url = `https://api.github.com/repos/thereseperswalld/Trafikljuset`;
-
+// PROJECT
+async function fetchRepoData(url) {
     try {
         const response = await fetch(url);
         const repo = await response.json();
-        displayRepos(repo);
+        renderRepo(repo);
     } catch (error) {
-        console.error("Kunde inte hämta repositories", error);
+        console.error("Kunde inte hämta repository", error);
     }
 }
 
-function displayRepos(repo) {
+function renderRepo(repo) {
     const repoContainer = document.getElementById("repo-container");
     const repoElement = document.createElement("div");
     repoElement.classList.add("project-card");
 
-    const livePreviewLink = repo.homepage || `https://thereseperswalld.github.io/Trafikljuset/`;
+    // Dynamiska beskrivningar och teknologier
+    const descriptions = {
+        "Training-schedule": "Ett träningsschema som hjälper användare att hålla koll på sina träningspass och framsteg.",
+        "U03-Techtitans-Quiz": "En quiz-applikation där användare kan testa sina kunskaper i olika ämnen.",
+        "Trafikljuset": "En enkel applikation som simulerar trafikljus för att hjälpa användare att förstå deras funktion."
+    };
     
-    // Generera HTML för repository
+    const technologies = {
+        "Training-schedule": "HTML, CSS, JavaScript",
+        "U03-Techtitans-Quiz": "HTML, CSS, JavaScript",
+        "Trafikljuset": "HTML, CSS"
+    };
+
+    const images = {
+        "Training-schedule": "images/Traning.png",  // Ange den faktiska sökvägen till din bild
+        "U03-Techtitans-Quiz": "images/QuizMix.png",   // Ange den faktiska sökvägen till din bild
+        "Trafikljuset": "images/trafikljuset.png"  // Ange den faktiska sökvägen till din bild
+    };
+
+    const description = descriptions[repo.name] || "Ingen beskrivning tillgänglig";
+    const tech = technologies[repo.name] || "Okända teknologier";
+    const imageUrl = images[repo.name] || "images/default-image.png";  // Fallback om ingen bild finns
+    const livePreviewLink = repo.homepage || `https://thereseperswalld.github.io/${repo.name}/`;
+
     repoElement.innerHTML = `
         <figure class="project-image" style="background-image: url('https://raw.githubusercontent.com/TheresePerswalld/Trafikljuset/main/path/to/images/traffic-light.png');"></figure>
         <section class="project-details">
             <h2>${repo.name}</h2>
-            <p>${repo.description || "Ingen beskrivning tillgänglig"}</p>
-            <p><strong>HTML,CSS,</strong></p>
+            <p>${description}</p>
+            <p><strong>${tech}</strong></p>
             <div class="buttons">
-                <a href="${repo.homepage || `https://thereseperswalld.github.io/Trafikljuset/`}" class="button" target="_blank">Live Preview</a>
+                <a href="${livePreviewLink}" class="button" target="_blank">Live Preview</a>
                 <a href="${repo.html_url}" class="button" target="_blank">View Code</a>
             </div>
         </section>
@@ -62,148 +74,40 @@ function displayRepos(repo) {
     repoContainer.appendChild(repoElement);
 }
 
-fetchTrafikljuset();
+// Hämta och visa data för alla repos
+fetchRepoData('https://api.github.com/repos/thereseperswalld/Trafikljuset');
+fetchRepoData('https://api.github.com/repos/TheresePerswalld/Training-schedule');
+fetchRepoData('https://api.github.com/repos/thereseperswalld/U03-Techtitans-Quiz');
 
-async function fetchTrainingSchedule() {
-    const url = `https://api.github.com/repos/TheresePerswalld/Training-schedule`;
-
-    try {
-        const response = await fetch(url);
-        const repo = await response.json();
-        displayRepos(repo);
-    } catch (error) {
-        console.error("Kunde inte hämta repositories", error);
-    }
-}
-
-function displayRepos(repo) {
-    const repoContainer = document.getElementById("repo-container");
-    const repoElement = document.createElement("div");
-    repoElement.classList.add("project-card");
-
-    const livePreviewLink = repo.homepage || `https://thereseperswalld.github.io/Training-schedule/`;
-    
-    // Generera HTML för repository
-    repoElement.innerHTML = `
-        <figure class="project-image"  <img src="träning-schedule.png" alt="Training Schedule">
-        </figure>
-        <section class="project-details">
-            <h2>${repo.name}</h2>
-            <p>${repo.description || "Ingen beskrivning tillgänglig"}</p>
-            <p><strong>${technologies}</strong></p>
-            <div class="buttons">
-                <a href="${repo.homepage || 'https://thereseperswalld.github.io/Training-schedule/'}" class="button" target="_blank">Live Preview</a>
-                <a href="${repo.html_url || '#'}" class="button" target="_blank">View Code</a>
-            </div>
-        </section>
-    `;
-    
-    repoContainer.appendChild(repoElement);
-}
-
-fetchTrainingSchedule();
-
-async function fetchTechtitansQuiz() {
-    const url = `https://api.github.com/repos/thereseperswalld/U03-Techtitans-Quiz`;
-
-    try {
-        const response = await fetch(url);
-        const repo = await response.json();
-        displayRepos(repo);
-    } catch (error) {
-        console.error("Kunde inte hämta repositories", error);
-    }
-}
-
-function displayRepos(repo) {
-    const repoContainer = document.getElementById("repo-container");
-    const repoElement = document.createElement("div");
-    repoElement.classList.add("project-card");
-
-    
-        // Definiera vilka teknologier som ska visas baserat på repo-namnet
-        let technologies = "";
-        if (repo.name === "Training-schedule") {
-            technologies = "HTML, CSS, JavaScript";
-        } else if (repo.name === "Trafikljuset") {
-            technologies = "HTML, CSS";
-        } else if (repo.name === "U03-Techtitans-Quiz") {
-            technologies = "HTML, CSS, JavaScript";
-        } else {
-            technologies = "Okända teknologier";
-        }
-
-    const livePreviewLink = repo.homepage || `https://thereseperswalld.github.io/U03-Techtitans-Quiz/`;
-    
-    // Generera HTML för repository
-    repoElement.innerHTML = `
-        <figure class="project-image" style="background-image: url('https://raw.githubusercontent.com/TheresePerswalld/Trafikljuset/main/path/to/images/traffic-light.png');"></figure>
-        <section class="project-details">
-            <h2>${repo.name}</h2>
-            <p>${repo.description || "Ingen beskrivning tillgänglig"}</p>
-            <p><strong>${technologies}</strong></p>
-            <div class="buttons">
-                <a href="${repo.homepage || `https://thereseperswalld.github.io/U03-Techtitans-Quiz/`}" class="button" target="_blank">Live Preview</a>
-                <a href="${repo.html_url}" class="button" target="_blank">View Code</a>
-            </div>
-        </section>
-    `;
-    
-    repoContainer.appendChild(repoElement);
-}
-
-fetchTechtitansQuiz();
-
-
-
-//ABOUT 
-
-// Fetch JSON data and generate HTML
+// ABOUT
 async function fetchData() {
     try {
-        const response = await fetch('information.json');
+        const response = await fetch(aboutFile);
         const data = await response.json();
-        renderWorkExperience(data.workExperience);
-        renderEducation(data.education);
+        renderExperience(data.workExperience, 'work-container');
+        renderExperience(data.education, 'education-container');
     } catch (error) {
         console.error('Error fetching data:', error);
     }
 }
 
-// Generate Work Experience HTML
-function renderWorkExperience(workExperience) {
-    const workContainer = document.getElementById('work-container');
-    workExperience.forEach(job => {
-        const jobElement = document.createElement('div');
-        jobElement.classList.add('card');
-        jobElement.innerHTML = `
-            <h3>${job.title}</h3>
-            <p><strong>Location:</strong> ${job.location.address}, ${job.location.city}</p>
-            <p><strong>Type:</strong> ${job.type}</p>
-            <p><strong>Period:</strong> ${job.period.start} - ${job.period.end}</p>
+function renderExperience(data, containerId) {
+    const container = document.getElementById(containerId);
+    data.forEach(item => {
+        const itemElement = document.createElement('div');
+        itemElement.classList.add('card');
+        itemElement.innerHTML = `
+            <h3>${item.title}</h3>
+            <p><strong>Location:</strong> ${item.location.address}, ${item.location.city}</p>
+            <p><strong>Type:</strong> ${item.type}</p>
+            ${item.period ? `<p><strong>Period:</strong> ${item.period.start} - ${item.period.end}</p>` : ''}
         `;
-        workContainer.appendChild(jobElement);
-    });
-}
-
-// Generate Education HTML
-function renderEducation(education) {
-    const educationContainer = document.getElementById('education-container');
-    education.forEach(course => {
-        const courseElement = document.createElement('div');
-        courseElement.classList.add('card');
-        courseElement.innerHTML = `
-            <h3>${course.title}</h3>
-            <p><strong>Location:</strong> ${course.location.address}, ${course.location.city}</p>
-            <p><strong>Type:</strong> ${course.type}</p>
-        `;
-        educationContainer.appendChild(courseElement);
+        container.appendChild(itemElement);
     });
 }
 
 // Load data on page load
 fetchData();
-
 
 
     
