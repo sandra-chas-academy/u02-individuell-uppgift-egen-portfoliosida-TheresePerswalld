@@ -81,16 +81,6 @@ function displayRepos(repo) {
     const repoElement = document.createElement("div");
     repoElement.classList.add("project-card");
 
-     // Definiera vilka teknologier som ska visas baserat på repo-namnet
-    let technologies = "";
-    if (repo.name === "Training-schedule") {
-            technologies = "HTML,CSS,JavaScript";
-    } else if (repo.name === "Trafikljuset") {
-            technologies = "HTML, CSS";
-    } else {
-            technologies = "Okända teknologier";
-    }
-
     const livePreviewLink = repo.homepage || `https://thereseperswalld.github.io/Training-schedule/`;
     
     // Generera HTML för repository
@@ -112,6 +102,59 @@ function displayRepos(repo) {
 }
 
 fetchTrainingSchedule();
+
+async function fetchTechtitansQuiz() {
+    const url = `https://api.github.com/repos/thereseperswalld/U03-Techtitans-Quiz`;
+
+    try {
+        const response = await fetch(url);
+        const repo = await response.json();
+        displayRepos(repo);
+    } catch (error) {
+        console.error("Kunde inte hämta repositories", error);
+    }
+}
+
+function displayRepos(repo) {
+    const repoContainer = document.getElementById("repo-container");
+    const repoElement = document.createElement("div");
+    repoElement.classList.add("project-card");
+
+    
+        // Definiera vilka teknologier som ska visas baserat på repo-namnet
+        let technologies = "";
+        if (repo.name === "Training-schedule") {
+            technologies = "HTML, CSS, JavaScript";
+        } else if (repo.name === "Trafikljuset") {
+            technologies = "HTML, CSS";
+        } else if (repo.name === "U03-Techtitans-Quiz") {
+            technologies = "HTML, CSS, JavaScript";
+        } else {
+            technologies = "Okända teknologier";
+        }
+
+    const livePreviewLink = repo.homepage || `https://thereseperswalld.github.io/U03-Techtitans-Quiz/`;
+    
+    // Generera HTML för repository
+    repoElement.innerHTML = `
+        <figure class="project-image" style="background-image: url('https://raw.githubusercontent.com/TheresePerswalld/Trafikljuset/main/path/to/images/traffic-light.png');"></figure>
+        <section class="project-details">
+            <h2>${repo.name}</h2>
+            <p>${repo.description || "Ingen beskrivning tillgänglig"}</p>
+            <p><strong>${technologies}</strong></p>
+            <div class="buttons">
+                <a href="${repo.homepage || `https://thereseperswalld.github.io/U03-Techtitans-Quiz/`}" class="button" target="_blank">Live Preview</a>
+                <a href="${repo.html_url}" class="button" target="_blank">View Code</a>
+            </div>
+        </section>
+    `;
+    
+    repoContainer.appendChild(repoElement);
+}
+
+fetchTechtitansQuiz();
+
+
 
 //ABOUT 
 

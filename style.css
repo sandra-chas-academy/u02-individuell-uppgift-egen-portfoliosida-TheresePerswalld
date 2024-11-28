@@ -1,7 +1,7 @@
 :root {
-    --gradient-color: linear-gradient(90deg, rgba(229, 16, 170, 1) 0%, rgba(19, 176, 245, 1) 100%);
+    --gradient-color: #FFF4D9;
     --primary-color: #202428;
-    --secondary-color: #fefbfb;
+    --secondary-color: #141313;
 }  
 
 h2, p, h3{
@@ -24,7 +24,7 @@ h1{
 
 html, body { 
     font-family:"poppins", sans-serif;
-    background: linear-gradient(135deg, #3E8FF3, #3EF1C1);
+    background: var(--gradient-color);
     background-attachment: fixed;
     height: 100vh;
     font-weight: 600;
@@ -159,13 +159,12 @@ html{
 .hero-img{
     border: 5px solid #0000;
     border-radius: 50%;
-    outline-color: white;
-    background: linear-gradient( #faf7f7db, #f9f9fa) border-box;
+    outline-color: rgb(25, 17, 51);
+    background: linear-gradient( #fcfbfcf3, #f9f9fa) border-box;
     width: 14rem;
     height: 14rem;
     display: flex;
     box-shadow: 0 10px 20px 3px rgba(28, 10, 101, 0.308);
-
 
     &:hover{
         cursor: pointer;
@@ -176,7 +175,7 @@ html{
 }
 
 .name{
-    background: linear-gradient(90deg, rgba(229, 16, 170, 1) 0%, rgba(19, 176, 245, 1) 100%);
+    background: linear-gradient(90deg, #17124d 0%, rgba(19, 176, 245, 1) 100%);
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -317,6 +316,7 @@ svg {
 
 .tech-stack{
     margin: 2rem;
+    margin-top: 10rem;
 }
 
 
@@ -357,14 +357,17 @@ p {
 }
 
 .project {
-    padding-left: 1rem;
+    padding-left: 2rem;
+    padding-top: 2rem;
+
 }
 
 .projects-container {
     display: grid;
     grid-template-columns: 1fr; /* One column by default */
     gap: 20px;
-    padding: 20px;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 
 /* Style for project cards */
@@ -602,7 +605,7 @@ footer{
 }
 
 h2{
-    color: rgb(249, 245, 245);
+    color: rgb(23, 17, 49);
 }
 
 h3{
@@ -652,15 +655,23 @@ p {
 
 .tech-stack {
     margin: 3rem;
+    margin-top: 10rem;
 }
 
     /*PROJEKT*/
 .projects-container {
     grid-template-columns: repeat(3, 1fr);
+    padding-left: 3rem;
 }
 
-.skils{
-    padding: 2rem;
+.project {
+    padding-left: 3rem;
+}
+
+.skills{
+    padding: 0.8rem;
+    padding-bottom: 3rem;
+    background-color: rgb(110, 203, 110);
 }
 
 .project-image {
@@ -681,10 +692,7 @@ p {
 
 .contact-container p, .contact-container a {
      margin: 0; /* Tar bort extra marginaler för större skärmar */
-    font-size: 58px;
+    font-size: 30px;
 }
 
-.or,.phone{
-    display: none;
-}
 }
