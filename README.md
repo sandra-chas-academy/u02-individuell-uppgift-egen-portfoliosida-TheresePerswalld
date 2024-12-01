@@ -34,28 +34,28 @@ När hämtningen av projekten sker ska det finnas information om att projekten h
 
 1. Du sammanfattar ditt projekt i README.md och reflekterar kring styrkor och ev brister. Max 500 ord.
 
-När jag gjorde U01 tycker jag att det var svårt men när man började med denna uppgift så kände jag att U01 var enkel om jag ska jämföra med denna och JavaScript som jag har tyck är jättesvårt. Det är mycker man ska lära sig hela tiden och det kommer alltid mya saker som man kan göra/lägga till/synka o.s.v. Styrkerma är att jag inte ger upp utan söker svar om jag verkligen inte kan och lär mig på egenhand ocksp. 
-jag tycker fortfarande att JavaScripten är svår och känner inte att jag har alla hästar hemma där men tänker också att det kommer med kursens gång och att man inte får ge upp för att man inte förstår. 
+När jag gjorde U01 tycker jag att det var svårt men när man började med denna uppgift så kände jag att U01 var enkel om jag ska jämföra med denna och JavaScript som jag har tyck är jättesvårt. Det är mycker man ska lära sig hela tiden och det kommer alltid mya saker som man kan göra/lägga till/synka o.s.v. Styrkan hos mig är att jag inte ger upp utan söker svar om jag verkligen inte kan och lär mig på egenhand också. 
+Jag tycker fortfarande att JavaScripten är svår och känner inte att jag har alla hästar hemma där men tänker också att det kommer med kursens gång och att man inte får ge upp för att man inte förstår. Många i klassen kan mycker och det lär jag mig mycket av också. Grupparbetet vi nyss hade har gjort stor nytta och har gett mig mycket, att vi i vår grupp har verklgien hjälp varandra och suttit tillsammans hela tiden. Det har varit grymt. 
 
 
 2. Du svarar på dessa frågor (max 800 ord):
 
 Vad kan man utveckla m.h.a av Javascript inom frontend?
 
-JavaScript är ett kraftfullt språk som är centralt för frontendutveckling och används för att skapa interaktivitet, dynamiska funktioner och avancerade användarupplevelser.
-JavaScript är ett mångsidigt språk som låter dig skapa allt från enkla interaktiva funktioner till avancerade webblösningar som dynamiska applikationer, spel, animationer och datavisualiseringar. Möjligheterna är enorma, och kunskap i JavaScript är en nyckelkompetens inom frontendutveckling!
+JavaScript är ett stort språk som är det första (främsta) för frontendutveckling och används för att skapa interaktivitet, dynamiska funktioner och avancerade användarupplevelser.
+JavaScript är ett mångsidigt språk som låter dig skapa allt från enkla funktioner till avancerade webblösningar som dynamiska applikationer, spel, animationer och datavisualiseringar. Möjligheterna är väldigt stora, och kunskap i JavaScript är en nyckeln inom frontendutveckling!
 
 Vad är JSON och hur används det inom frontend?
 
-JSON står för (JavaScript Object Notation) och är ett lättviktigt dataformat som används för att strukturera och utbyta data mellan olika system. Formatet används för att skcika data från backend till frontend. 
-Oftast hämtar man data från en databas som direkt omvandlas av backend men man kan lagra även i JSON i filer (.json). 
+JSON står för (JavaScript Object Notation) och är ett viktigt dataformat som används för att strukturera och utbyta data mellan olika system. Formatet används för att skcika data från backend till frontend. 
+Oftast hämtar man data från en databas som direkt omvandlas av backend men som kan lagra även i JSON i filer (.json). 
 JSON används ofta inom frontendutveckling för att hämta, spara och presentera data från externa API eller backendservrar.
-JSON-data består av nyckel-värde-par och har en struktur som liknar JavaScript-objekt.
-Frontend-applikationer kan lagra JSON-data lokalt i Local Storage eller Session Storage. Detta används exempelvis för att spara användarinställningar eller sessionsdata.
+JSON-data består av en struktur som liknar JavaScript-objekt.
+Frontend-applikationer kan lagra JSON-data lokalt i Local Storage. Detta används exempelvis för att spara användarinställningar eller sessionsdata.
 
 Vad är HTTP och varför bör man som frontendutvecklare ha kunskap om det och dess protokoll?
 
-HTTP är (HyperText Transfer Protocol) som är ett protokoll som används för att överföra data mellan klienten (t.ex. en webbläsare) och servern över internet. Det är grundstenen för webben och används för att hämta resurser som webbsidor, bilder, videos och API-data.
+HTTP är (HyperText Transfer Protocol) som är ett protokoll som används för att överföra data mellan användaren (t.ex. en webbläsare) och servern över internet. Det är grundstenen för webben och används för att hämta fakta som webbsidor, bilder, videos och API-data.
 HTTP är en samling av regler som bestämmer hur kommunicationen mellan två enheter ska fungera. 
 
 ## Kriterier för bedömning

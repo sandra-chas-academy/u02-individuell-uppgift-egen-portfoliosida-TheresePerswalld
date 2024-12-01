@@ -585,6 +585,9 @@ p {
     grid-template-columns: repeat(3, 1fr);
     padding-left: 3rem;
 }
+.project {
+    padding-left: 3rem;
+}
 
 .skills{
     padding: 0.8rem;

@@ -15,19 +15,48 @@ document.addEventListener('scroll', () => {
     let index = sections.length;
     while (--index && window.scrollY + 50 < sections[index].offsetTop) {}
     navLinks.forEach(link => link.classList.remove('active'));
-    // navLinks[index].classList.add('active');
 });
 
 document.addEventListener("DOMContentLoaded", () => {
     const heroFigure = document.querySelector(".hero-figure");
     const heroContent = document.querySelector(".hero-content");
 
-    // Lägg till klassen "animate" efter en kort fördröjning
+// Add the "animate" class after a short delay
     setTimeout(() => {
         heroFigure.classList.add("animate");
         heroContent.classList.add("animate");
     }, 200); // 200 ms fördröjning
 });
+
+// ABOUT
+async function fetchData() {
+    try {
+        const response = await fetch(aboutFile);
+        const data = await response.json();
+        renderExperience(data.workExperience, 'work-container');
+        renderExperience(data.education, 'education-container');
+    } catch (error) {
+        console.error('Error fetching data:', error);
+    }
+}
+
+function renderExperience(data, containerId) {
+    const container = document.getElementById(containerId);
+    data.forEach(item => {
+        const itemElement = document.createElement('div');
+        itemElement.classList.add('card');
+        itemElement.innerHTML = `
+            <h3>${item.title}</h3>
+            <p><strong>Location:</strong> ${item.location.address}, ${item.location.city}</p>
+            <p><strong>Type:</strong> ${item.type}</p>
+            ${item.period ? `<p><strong>Period:</strong> ${item.period.start} - ${item.period.end}</p>` : ''}
+        `;
+        container.appendChild(itemElement);
+    });
+}
+
+// Load data on page load
+fetchData();
 
 // PROJECT
 async function fetchRepoData(url) {
@@ -59,9 +88,9 @@ function renderRepo(repo) {
     };
 
     const images = {
-        "Training-schedule": "images/Traning.png",  // Ange den faktiska sökvägen till din bild
-        "U03-Techtitans-Quiz": "images/QuizMix.png",   // Ange den faktiska sökvägen till din bild
-        "Trafikljuset": "images/traffic-light.png"  // Ange den faktiska sökvägen till din bild
+        "Training-schedule": "images/Traning.png", 
+        "U03-Techtitans-Quiz": "images/QuizMix.png", 
+        "Trafikljuset": "images/traffic-light.png"
     };
 
     const description = descriptions[repo.name] || "#";
@@ -90,36 +119,6 @@ fetchRepoData('https://api.github.com/repos/thereseperswalld/Trafikljuset');
 fetchRepoData('https://api.github.com/repos/TheresePerswalld/Training-schedule');
 fetchRepoData('https://api.github.com/repos/thereseperswalld/U03-Techtitans-Quiz');
 
-
-// ABOUT
-async function fetchData() {
-    try {
-        const response = await fetch(aboutFile);
-        const data = await response.json();
-        renderExperience(data.workExperience, 'work-container');
-        renderExperience(data.education, 'education-container');
-    } catch (error) {
-        console.error('Error fetching data:', error);
-    }
-}
-
-function renderExperience(data, containerId) {
-    const container = document.getElementById(containerId);
-    data.forEach(item => {
-        const itemElement = document.createElement('div');
-        itemElement.classList.add('card');
-        itemElement.innerHTML = `
-            <h3>${item.title}</h3>
-            <p><strong>Location:</strong> ${item.location.address}, ${item.location.city}</p>
-            <p><strong>Type:</strong> ${item.type}</p>
-            ${item.period ? `<p><strong>Period:</strong> ${item.period.start} - ${item.period.end}</p>` : ''}
-        `;
-        container.appendChild(itemElement);
-    });
-}
-
-// Load data on page load
-fetchData();
 
 
     

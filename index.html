@@ -1,123 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Therese Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<style>
-html {
-  scroll-behavior: smooth;
-}
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
 
-#section1 {
-  height: 100vh;
-  background: #FFF4D9;
-}
+      #section1 {
+        height: 100vh;
+        background: #fff4d9;
+      }
 
-#section2 {
-  height: auto;
-  background-color: rgb(126, 211, 239);
-  padding-bottom: 1rem;
-}
+      #section2 {
+        height: auto;
+        background-color: rgb(126, 211, 239);
+        padding-bottom: 1rem;
+      }
 
-#section3 {
-    height: 50vh;
-}
+      #section3 {
+        height: 50vh;
+      }
 
-#section4 {
-    height:auto;
-}
+      #section4 {
+        height: auto;
+      }
 
-#section5 {
-    height: 20vh;
-    margin-top: 8rem;
-}
-</style>
-</head>
-<body>
+      #section5 {
+        height: 20vh;
+        margin-top: 8rem;
+      }
+    </style>
+  </head>
+  <body>
     <main>
-        <section class="hero" id="section1">
-            <nav class="nav-container">
-                <div id="nav-icon3">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </nav>
-                <div class="nav-link-container">
-                    <ul class="meny">
-                        <li><a class="nav-link" href="#section1">Home</a></li>
-                        <li><a class="nav-link" href="#section2">About</a></li>
-                        <li><a class="nav-link" href="#section3">Technologies</a></li>
-                        <li><a class="nav-link" href="#section4">Project</a></li>
-                        <li><a class="nav-link" href="contact.html">Contact</a></li>
-                    </ul> 
-                </div> 
+      <section class="hero" id="section1">
+        <nav class="nav-container">
+          <div id="nav-icon3">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </nav>
+        <div class="nav-link-container">
+          <ul class="meny">
+            <li><a class="nav-link" href="#section1">Home</a></li>
+            <li><a class="nav-link" href="#section2">About</a></li>
+            <li><a class="nav-link" href="#section3">Technologies</a></li>
+            <li><a class="nav-link" href="#section4">Project</a></li>
+            <li><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
 
-            <figure class="hero-figure">
-                <img class="hero-img" src="images/Therese.webp" alt="">
-            </figure>
-            <div class="hero-content">
-                <h4 class="hero-text">My name is Therése Perswalld. </h4>
-            </div>
+        <figure class="hero-figure">
+          <img class="hero-img" src="images/Therese.webp" alt="" />
+        </figure>
+        <div class="hero-content">
+          <h4 class="hero-text">My name is Therése Perswalld.</h4>
+        </div>
+      </section>
+
+      <section class="about-me" id="section2">
+        <h1 class="info-me">About Me</h1>
+        <div class="info">
+          <p>
+            I am a woman who is married and has two kids. Loves to train and
+            have a high pace all the time
+          </p>
+          <!-- <p>Loves to train and have a high pace all the time.</p> -->
+          <p class="hero-text">
+            I’m currently studying to become a full-stack developer and built
+            this site to showcase who I am
+          </p>
+          <!-- <p class="hero-text">.</p> -->
+        </div>
+        <section class="work-experience">
+          <h2>Work Experience</h2>
+          <div id="work-container"></div>
         </section>
-
-        <section class="about-me" id="section2">
-            <h1 class="info-me">About Me</h1>
-            <div class="info">
-              <p>I am a woman who is married and has two kids. Loves to train and have a high pace all the time </p>
-              <!-- <p>Loves to train and have a high pace all the time.</p> -->
-              <p class="hero-text">I’m currently studying to become a full-stack developer and built this site to showcase who I am</p>
-              <!-- <p class="hero-text">.</p> -->
-            </div>
-            <section class="work-experience">
-                <h2>Work Experience</h2>
-                <div id="work-container"></div>
-            </section>
-            <section class="education">
-                <h2>Education</h2>
-                <div id="education-container"></div>
-            </section>
+        <section class="education">
+          <h2>Education</h2>
+          <div id="education-container"></div>
         </section>
+      </section>
 
+      <section class="tech-stack" id="section3">
+        <h2>Tech Stack</h2>
+        <p>Technologies I've been working with recently</p>
 
-        <section class="tech-stack" id="section3">
-            <h2>Tech Stack</h2>
-            <p>Technologies I've been working with recently</p>
-      
-            <div class="picture">
-      
-                <div class="icons-grid">
-                    <img class="icons-photo" src="images/html.png" alt="HTML5">
-                    <img class="icons-photo" src="images/css.png" alt="CSS3">
-                    <img class="icons-photo" src="images/javascrips.png" alt="JavaScript">
-                    <img class="icons-photo" src="images/githib.png" alt="React">
-                    <img class="icons-photo" src="images/figma.png" alt="Redux">
-                    <img class="icons-photo" src="images/vscode.png" alt="Tailwind CSS">
-            </div>  
-        </section> 
-    </main>    
+        <div class="picture">
+          <div class="icons-grid">
+            <img class="icons-photo" src="images/html.png" alt="HTML5" />
+            <img class="icons-photo" src="images/css.png" alt="CSS3" />
+            <img
+              class="icons-photo"
+              src="images/javascrips.png"
+              alt="JavaScript"
+            />
+            <img class="icons-photo" src="images/githib.png" alt="React" />
+            <img class="icons-photo" src="images/figma.png" alt="Redux" />
+            <img
+              class="icons-photo"
+              src="images/vscode.png"
+              alt="Tailwind CSS"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
 
     <section class="skills">
-        <h2 class="project" id="section4">Projects</h2>
-        <div class="projects-container" id="repo-container"></div>
+      <h2 class="project" id="section4">Projects</h2>
+      <div class="projects-container" id="repo-container"></div>
     </section>
 
-    <div class="contact-container"  id="section5">
-        <p>For any questions please drop a mail</p>
-        <a href="email" class="email">therese.perswalld@chasacademy.se</a>
-        <a href="tel" class="phone">+46 739563855</a>
+    <div class="contact-container" id="section5">
+      <p>For any questions please drop a mail</p>
+      <a href="email" class="email">therese.perswalld@chasacademy.se</a>
+      <a href="tel" class="phone">+46 739563855</a>
     </div>
 
     <footer>
-        Designed and built by <span class="Therese">Therése</span>
-        with <span class="Therese">power</span>
-        & <span class="Therese">happines</span>
-  </footer>
+      Designed and built by <span class="Therese">Therése</span> with
+      <span class="Therese">power</span> & <span class="Therese">happines</span>
+    </footer>
     <script src="script.js" defer></script>
-
-</body>
+  </body>
 </html>
