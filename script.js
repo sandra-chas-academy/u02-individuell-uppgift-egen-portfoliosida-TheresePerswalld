@@ -4,11 +4,11 @@ const aboutFile = "./information.json";
 $(document).ready(function() {
     $('#nav-icon3').click(function() {
         $(this).toggleClass('open');
-        $('.nav-link-container, .media-icons').toggleClass('visible');
+        $('.nav-link-container').toggleClass('visible');
     });
 });
 
-// Markera aktiv länk vid scroll
+// Frontide, picture and text
 document.addEventListener('scroll', () => {
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('.nav-link');
@@ -16,6 +16,17 @@ document.addEventListener('scroll', () => {
     while (--index && window.scrollY + 50 < sections[index].offsetTop) {}
     navLinks.forEach(link => link.classList.remove('active'));
     // navLinks[index].classList.add('active');
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const heroFigure = document.querySelector(".hero-figure");
+    const heroContent = document.querySelector(".hero-content");
+
+    // Lägg till klassen "animate" efter en kort fördröjning
+    setTimeout(() => {
+        heroFigure.classList.add("animate");
+        heroContent.classList.add("animate");
+    }, 200); // 200 ms fördröjning
 });
 
 // PROJECT
@@ -50,16 +61,16 @@ function renderRepo(repo) {
     const images = {
         "Training-schedule": "images/Traning.png",  // Ange den faktiska sökvägen till din bild
         "U03-Techtitans-Quiz": "images/QuizMix.png",   // Ange den faktiska sökvägen till din bild
-        "Trafikljuset": "images/trafikljuset.png"  // Ange den faktiska sökvägen till din bild
+        "Trafikljuset": "images/traffic-light.png"  // Ange den faktiska sökvägen till din bild
     };
 
-    const description = descriptions[repo.name] || "Ingen beskrivning tillgänglig";
+    const description = descriptions[repo.name] || "#";
     const tech = technologies[repo.name] || "Okända teknologier";
     const imageUrl = images[repo.name] || "images/default-image.png";  // Fallback om ingen bild finns
     const livePreviewLink = repo.homepage || `https://thereseperswalld.github.io/${repo.name}/`;
 
     repoElement.innerHTML = `
-        <figure class="project-image" style="background-image: url('https://raw.githubusercontent.com/TheresePerswalld/Trafikljuset/main/path/to/images/traffic-light.png');"></figure>
+        <figure class="project-image" style="background-image: url('${imageUrl}');"></figure>
         <section class="project-details">
             <h2>${repo.name}</h2>
             <p>${description}</p>
@@ -78,6 +89,7 @@ function renderRepo(repo) {
 fetchRepoData('https://api.github.com/repos/thereseperswalld/Trafikljuset');
 fetchRepoData('https://api.github.com/repos/TheresePerswalld/Training-schedule');
 fetchRepoData('https://api.github.com/repos/thereseperswalld/U03-Techtitans-Quiz');
+
 
 // ABOUT
 async function fetchData() {

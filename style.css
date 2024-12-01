@@ -4,6 +4,18 @@
     --secondary-color: #141313;
 }  
 
+.hero-content, .hero-figure {
+    opacity: 0;
+    transform: translateX(-390px); /* Flytta ut till vänster */
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Animation när elementen är aktiva */
+.hero-content.animate, .hero-figure.animate {
+    opacity: 1;
+    transform: translateX(0); /* Återställ positionen */
+}
+
 h2, p, h3{
     color: var(--secondary-color);
 }
@@ -16,6 +28,7 @@ h2, p, h3{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    max-width: 100%;
 }
 
 html, body { 
@@ -86,15 +99,6 @@ html{
     list-style: none;
 }
 
-.media-icons {
-    align-items: center;
-}
-
-.media-icons img{
-    height: 2rem;
-    margin-top: 0.7rem;
-} 
-
 .hero{
     display: flex;
     align-items: center;
@@ -104,9 +108,6 @@ html{
 }
 
 .hero-figure{
-    height: 16rem;
-    border-radius: 50%;
-    object-fit: cover;
     margin-top: 6rem;
 }
 
@@ -121,7 +122,6 @@ html{
     margin-top: 0;
     transition: .5s ease-in-out;
     cursor: pointer;
-      
     
     &:hover{
         cursor: pointer;
@@ -154,13 +154,14 @@ html{
   
 .hero-img{
     border: 5px solid #0000;
-    border-radius: 50%;
+    border-radius: 30%;
     outline-color: rgb(25, 17, 51);
     background: linear-gradient( #fcfbfcf3, #f9f9fa) border-box;
     width: 14rem;
-    height: 14rem;
+    height: 20rem;
     display: flex;
     box-shadow: 0 10px 20px 3px rgba(28, 10, 101, 0.308);
+    margin-bottom: 3rem;
 
     &:hover{
         cursor: pointer;
@@ -170,22 +171,11 @@ html{
     }
 }
 
-/* .name{
-    background: linear-gradient(90deg, #17124d 0%, rgba(19, 176, 245, 1) 100%);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-} */
-
 .hero-content{
-    font-size: 1.3rem;
+    font-size: 1.7rem;
     letter-spacing: -0.1rem;
     /* box-shadow: 0 10px 20px 3px rgba(28, 10, 101, 0.308); */
 }    
-
-/* .link-home{
-    font-size: 2rem;
-    font-weight: 800;
-} */
 
 footer{
     justify-content: center;
@@ -224,22 +214,10 @@ footer{
         text-shadow: 1px 1px 4px transparent;
     }
 }
-
-/* .workplace-web, .workplace-web-end {
-    grid-template-areas: "header work-status" "place period" "position .";
-    grid-template-columns: 1fr auto;
-    border-bottom: 1px solid #14133b;
-    padding: 1rem 0;
-    font-weight: normal;
-    display: flex;
-    margin-left: 2rem;
-    margin-right: 2rem;
-} */
-
 .about-me{
     color: var(--third-color);
     height: 100vh;
-    background: linear-gradient(90deg, #13B0F5 -2.06%, #E70FAA 100%);
+    background-color: rgb(126, 211, 239);
     background-attachment: fixed;
     padding-top: 1rem;
 }
@@ -282,37 +260,16 @@ h3{
 
 }
 
-/* .green {
-    color: var(--green-color);
-    background-color:var(--light-green-color);
-    border-radius: 21px;
-    padding: 4px;
-    display: flex;
-    flex-direction: column;
-    margin-top: 3rem;
-} */
-
-/* .work-place h4 {
-    display: flex;
-    align-items: center;
-} */
-
 svg {
     vertical-align: middle;
     margin-right: 5px;
 }
 
 /* TECHSTACK*/
-
 .tech-stack{
     margin: 2rem;
     margin-top: 10rem;
 }
-
-/* .icons-none{
-    display: none;
-    height: 100%;
-} */
 
 h2 {
     font-size: 28px;
@@ -340,7 +297,7 @@ p {
 
 /*PROJEKT*/
 .skills{
-    background: rgb(91, 196, 91);
+    background-color: rgb(126, 211, 239);
     padding-bottom: 2rem;
 }
 
@@ -373,11 +330,15 @@ p {
     }
 }
 
+p{
+    margin-top: 1rem;
+}
+
 .nav-container{
     display: flex;
 }
 .project-image {
-    height: 250px;
+    height: 450px;
     background-size: cover;
     background-position: center;
 }
@@ -435,20 +396,25 @@ p {
     color: #007bff; /* För att ge länkarna en hover-effekt */
 }
 
-/* .or {
-    margin: 10px 0;
-    font-style: italic;
-    font-weight: 400;
-} */
-
 /* MEDIA QUERY FOR SCREENS 768px AND ABOVE */
 
 @media (min-width: 768px) {
-
 .nav-container{
     display: flex;
     flex-direction: column;
     margin-left: auto;
+}
+
+.hero-content, .hero-figure {
+    opacity: 0;
+    transform: translateX(-390px); /* Flytta ut till vänster */
+    transition: opacity 2s ease-out, transform 2s ease-out;
+}
+
+/* Animation när elementen är aktiva */
+.hero-content.animate, .hero-figure.animate {
+    opacity: 1;
+    transform: translateX(0); /* Återställ positionen */
 }
 
 .meny{
@@ -494,23 +460,8 @@ h4{
     font-weight: bold;
 }    
 
-.nav-link{
-    font-size: 1.2rem;
-}
-
-.media-icons {
-    margin-top: 2rem;
-    margin-left: 9rem;
-    margin-right: 9rem;
-}
-
-.hero{
-    align-items: center; 
-    display: flex;
-    align-items: center;
-    text-align: center;
-    height: 100vh;
-    flex-direction: column;
+h4{
+    margin-top: 7rem;
 }
 
 .hero-content{
@@ -525,12 +476,11 @@ h4{
     width: 30rem;
     height: 20rem;
     margin-left: 9rem;
-    transition: transform 0.3s ease-in-out;
 }
 
 .hero-img{
     width: 20rem;
-    height: 20rem;
+    height: 27rem;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -556,7 +506,6 @@ footer{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* align-items: center; */
     text-align: center;
 }
 
@@ -585,12 +534,8 @@ footer{
     font-size: 2.2rem;
 }
 
-h2{
-    color: rgb(23, 17, 49);
-}
-
 h3{
-    color: #050505;
+    color: var(--secondary-color);
     font-size: 1.2rem;
     padding-bottom: 1rem;
 }
@@ -605,10 +550,6 @@ p{
 }
 
     /*TECHSTACK*/
-.grid-none, .tools{
-    display: none;
-} */
-
 .icons-none {
     display: flex;
 }  
@@ -645,18 +586,14 @@ p {
     padding-left: 3rem;
 }
 
-.project {
-    padding-left: 3rem;
-}
-
 .skills{
     padding: 0.8rem;
     padding-bottom: 3rem;
-    background-color: rgb(110, 203, 110);
+    background-color: rgb(126, 211, 239);
 }
 
 .project-image {
-    height: 300px;
+    height: 550px;
     background-size: cover;
     background-position: center;
 }
